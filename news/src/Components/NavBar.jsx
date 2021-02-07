@@ -1,16 +1,22 @@
 import React from 'react'
+import NasaLogo from '../Assets/NasaLogo.png';
+import {Link} from 'react-router-dom';
+
 
 function NavBar() {
     return (
         <nav>
-            <h1>TEK News</h1>
-            <span>Add your &lt;Link/&gt;'s to the Pages Here in the NavBar</span>
-            <p>You will need to use React Router's Navigation system as opposed to 'a' tags to achieve proper client side routing</p>
-            <ul>
-                <li><a href="http://bit.ly/teksysacademy" target="_blank" rel="noreferrer">Sports</a></li>
-                <li><a href="http://bit.ly/teksysacademy" target="_blank" rel="noreferrer">Weather</a></li>
-                <li><a href="http://bit.ly/teksysacademy" target="_blank" rel="noreferrer">Politics</a></li>
-            </ul>
+            <div className="top-nav">
+                <h1><Link to='/'>HUBBLESITE</Link></h1>
+                <img className="Logo" src={NasaLogo} alt="Logo"/>
+            </div>
+            <div className="nav-links">
+                <ul>
+                    <li><Link to='/images'>Images</Link></li>
+                    <li><Link to='/newsreleases'>News Releases</Link></li>
+                    <li><Link to='/videos'>Videos</Link></li>
+                </ul>
+            </div>
         </nav>
     )
 }
